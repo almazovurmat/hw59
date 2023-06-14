@@ -1,10 +1,18 @@
 import React from 'react';
+import './JokeCard.css';
 
-const JokeCard = () => {
+interface IProps {
+    value: string;
+}
+const JokeCard: React.FC<IProps> = ({ value }) => {
+
     return (
-        <div>
-            
-        </div>
+        <article className="JokeCard">
+            <div className="info">
+                <h6>Jokes about Chuck Noris</h6>
+            </div>
+            <p>{value}</p>
+        </article>
     );
 };
 

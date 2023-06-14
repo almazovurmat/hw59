@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css';
 import Jokes from "./containers/Jokes/Jokes";
+import './App.css';
 
 const App = () => (
-  <>
-    <p>Hello World</p>
+  <div className="container">
       <Jokes />
-  </>
+  </div>
 );
 
 export default App;

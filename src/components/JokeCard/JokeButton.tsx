@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {memo} from 'react';
 
-const JokeButton = () => {
+interface IProps {
+    getNewJoke: () => void;
+}
+
+const JokeButton: React.FC<IProps> = ({ getNewJoke }) => {
+    console.log('JokeButton');
     return (
-        <div>
-            
-        </div>
+        <button className="btn btn-primary" onClick={getNewJoke}>
+            Get new jokes
+        </button>
     );
 };
 
-export default JokeButton;
+export default memo(JokeButton);
