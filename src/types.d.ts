@@ -7,3 +7,8 @@ export interface IJokes {
     url: string;
     value: string;
 }
+
+export interface IMovies {
+    id: string;
+    titleMovie: string;
+}
