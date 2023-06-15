@@ -1,8 +1,8 @@
 import React from 'react';
 import { nanoid } from "nanoid";
 import { IMovies } from "../../types";
-import MovieForm from "../../components/MovieForm/MovieForm";
-import MovieItem from "../../components/MovieForm/MovieItem";
+import MovieForm from "../../components/Movie/MovieForm";
+import MovieItem from "../../components/Movie/MovieItem";
 
 interface State {
     movies: IMovies[];
