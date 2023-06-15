@@ -22,10 +22,10 @@ const MovieFormFC: React.FC<Props> = ({ onAddMovie }) => {
 
     return (
         <>
-            <form className="form-inline" onSubmit={onSubmit}>
+            <form className="form-inline mt-5" onSubmit={onSubmit}>
                 <div className="d-flex justify-content-between align-items-end">
                     <div className="form-group mx-sm-3 mb-2 col-10">
-                        <label htmlFor="new-movie" className="sr-only mb-2">
+                        <label htmlFor="new-movie" className="sr-only mb-2 mx-3">
                             Movie title
                         </label>
                         <input

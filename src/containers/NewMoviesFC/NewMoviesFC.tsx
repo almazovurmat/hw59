@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { nanoid } from "nanoid";
 import { IMovies } from "../../types";
-import MovieForm from "../../components/MovieFC/MovieFormFC";
-import MovieItem from "../../components/MovieFC/MovieItemFC";
+import MovieFormFC from "../../components/MovieFC/MovieFormFC";
+import MovieItemFC from "../../components/MovieFC/MovieItemFC";
 
-const NewMoviesFC = () => {
+const NewMovies = () => {
     const [movies, setMovies] = useState<IMovies[]>([]);
 
     useEffect(() => {
@@ -52,10 +52,10 @@ const NewMoviesFC = () => {
 
     return (
         <>
-            <MovieForm onAddMovie={addMovie} />
-            <h3>To watch list</h3>
+            <MovieFormFC onAddMovie={addMovie} />
+            <h3 className="mx-3 mt-5">To watch list</h3>
             {movies.map(item => (
-                <MovieItem
+                <MovieItemFC
                     key={item.id}
                     id={item.id}
                     title={item.titleMovie}
@@ -67,4 +67,4 @@ const NewMoviesFC = () => {
     );
 };
 
-export default NewMoviesFC;
+export default NewMovies;
