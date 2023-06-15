@@ -11,7 +11,7 @@ const Jokes = () => {
     const getNewJokes = useCallback( async () => {
         try {
             const promises = [];
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 3; i++) {
                 promises.push(fetch(url));
             }
             const responses = await Promise.all(promises);
@@ -34,7 +34,7 @@ const Jokes = () => {
 
     return (
         <>
-            <div className="JokeCards">
+            <div className="JokeCards mt-5">
                 {jokes.map((joke) => {
                     return (
                         <JokeCard
@@ -44,7 +44,9 @@ const Jokes = () => {
                     );
                 })}
             </div>
-            <JokeButton getNewJoke={getNewJokes} />
+            <div className="text-center mt-4">
+                <JokeButton getNewJoke={getNewJokes} />
+            </div>
         </>
     );
 };
